@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/nosenadayo/talana-k8s-infra.git
+    repoURL: https://github.com/nosenadayo/challenge_talana_infra.git
     targetRevision: HEAD
     path: infrastructure/redis
   destination:
