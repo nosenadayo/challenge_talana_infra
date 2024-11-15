@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: talana-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    alb.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+spec:
+  rules:
+  - host: backend.local
+    http:
+      paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: backend-service
+            port:
+              number: 3000
+  - host: frontend.local
+    http:
+      paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: frontend-service
+            port:
+              number: 80

@@ -5,3 +5,4 @@ resources:
   - backend.yaml
   - postgresql.yaml
   - redis.yaml
+  - ingress.yaml
