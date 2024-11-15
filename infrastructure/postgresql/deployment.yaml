@@ -26,7 +26,7 @@ spec:
               value: talana_password
           volumeMounts:
             - name: postgresql-data
-              mountPath: /var/lib/postgresql/data/talana
+              mountPath: /var/lib/postgresql/talana
       volumes:
         - name: postgresql-data
           persistentVolumeClaim:
